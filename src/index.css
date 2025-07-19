@@ -1,42 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Gaza Triage App Design System - Palestinian-inspired colors with medical focus */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Palestinian-inspired color palette */
+    --olive: 58 30% 28%;           /* #5A5634 - Primary olive */
+    --deep-red: 0 48% 29%;         /* #702525 - Emergency red */
+    --blush: 24 22% 74%;           /* #C3B4A5 - Soft neutral */
+    --beige: 36 56% 97%;           /* #FAF3ED - Background */
+    --camel: 29 28% 50%;           /* #A67758 - Secondary brown */
+    --violine: 331 20% 24%;        /* #4B3136 - Dark accent */
+    
+    /* Medical triage colors */
+    --triage-red: 0 85% 60%;       /* Critical emergency */
+    --triage-blue: 210 85% 60%;    /* Urgent */
+    --triage-green: 142 71% 45%;   /* Non-urgent */
+    
+    /* App semantic colors */
+    --background: var(--beige);
+    --foreground: var(--violine);
+    
+    --card: var(--beige);
+    --card-foreground: var(--violine);
+    
+    --popover: var(--beige);
+    --popover-foreground: var(--violine);
+    
+    --primary: var(--olive);
+    --primary-foreground: var(--beige);
+    
+    --secondary: var(--blush);
+    --secondary-foreground: var(--violine);
+    
+    --muted: var(--blush);
+    --muted-foreground: var(--camel);
+    
+    --accent: var(--camel);
+    --accent-foreground: var(--beige);
+    
+    --destructive: var(--triage-red);
+    --destructive-foreground: var(--beige);
+    
+    --border: var(--blush);
+    --input: var(--blush);
+    --ring: var(--olive);
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +114,66 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* RTL Support */
+  [dir="rtl"] {
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+  }
+  
+  [dir="ltr"] {
+    font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+  }
+}
+
+@layer components {
+  /* Medical triage color utilities */
+  .triage-red {
+    @apply bg-red-500 text-white;
+    background-color: hsl(var(--triage-red));
+  }
+  
+  .triage-blue {
+    @apply bg-blue-500 text-white;
+    background-color: hsl(var(--triage-blue));
+  }
+  
+  .triage-green {
+    @apply bg-green-500 text-white;
+    background-color: hsl(var(--triage-green));
+  }
+  
+  /* Emergency button styles */
+  .emergency-button {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 
+           text-lg font-medium py-6 px-8 rounded-xl min-h-[80px] 
+           flex items-center justify-center gap-3 transition-all
+           shadow-lg hover:shadow-xl active:scale-95;
+  }
+  
+  .symptom-button {
+    @apply bg-card border-2 border-border text-card-foreground 
+           hover:bg-accent hover:text-accent-foreground
+           py-4 px-6 rounded-lg text-base font-medium
+           transition-all duration-200 min-h-[60px]
+           flex items-center justify-center text-center;
+  }
+  
+  .symptom-button.selected {
+    @apply bg-primary text-primary-foreground border-primary;
+  }
+  
+  /* Tatreez-inspired border pattern */
+  .tatreez-border {
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        hsl(var(--olive)) 0px,
+        hsl(var(--olive)) 2px,
+        transparent 2px,
+        transparent 8px
+      );
+    border: 2px solid hsl(var(--olive));
   }
 }
