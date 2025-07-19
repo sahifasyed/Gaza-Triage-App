@@ -15,7 +15,8 @@ import {
   User, 
   Activity,
   Package,
-  Radio
+  Radio,
+  AlertTriangle
 } from 'lucide-react';
 
 export const SavedCases: React.FC = () => {
@@ -88,10 +89,14 @@ export const SavedCases: React.FC = () => {
         <CardTitle className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             {caseData.type === 'supply' ? <Package className="w-5 h-5" /> : <Activity className="w-5 h-5" />}
-            <span>
-              {caseData.priority === 'red' ? '🔴 CRITICAL' : 
-               caseData.priority === 'blue' ? '🔵 URGENT' : 
-               '🟢 NON-URGENT'}
+            <span className={`px-2 py-1 rounded text-xs font-bold ${
+              caseData.priority === 'red' ? 'bg-triage-red text-white' : 
+              caseData.priority === 'blue' ? 'bg-triage-blue text-white' : 
+              'bg-triage-green text-white'
+            }`}>
+              {caseData.priority === 'red' ? 'CRITICAL' : 
+               caseData.priority === 'blue' ? 'URGENT' : 
+               'NON-URGENT'}
             </span>
           </div>
           {caseData.bluetoothBroadcasting && (
@@ -193,7 +198,10 @@ export const SavedCases: React.FC = () => {
         {/* Critical Cases */}
         {redCases.length > 0 && (
           <div>
-            <h2 className="text-lg font-bold text-red-600 mb-3">🔴 CRITICAL CASES ({redCases.length})</h2>
+            <h2 className="text-lg font-bold text-triage-red mb-3 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5" />
+              CRITICAL CASES ({redCases.length})
+            </h2>
             <div className="space-y-3">
               {redCases.map(caseData => (
                 <CaseCard key={caseData.id} caseData={caseData} />
@@ -205,7 +213,10 @@ export const SavedCases: React.FC = () => {
         {/* Urgent Cases */}
         {blueCases.length > 0 && (
           <div>
-            <h2 className="text-lg font-bold text-blue-600 mb-3">🔵 URGENT CASES ({blueCases.length})</h2>
+            <h2 className="text-lg font-bold text-triage-blue mb-3 flex items-center gap-2">
+              <Clock className="w-5 h-5" />
+              URGENT CASES ({blueCases.length})
+            </h2>
             <div className="space-y-3">
               {blueCases.map(caseData => (
                 <CaseCard key={caseData.id} caseData={caseData} />
@@ -228,7 +239,10 @@ export const SavedCases: React.FC = () => {
         {/* Resolved Cases */}
         {resolvedCases.length > 0 && (
           <div className="border-t pt-6">
-            <h2 className="text-lg font-bold text-green-600 mb-3">✅ RESOLVED CASES ({resolvedCases.length})</h2>
+            <h2 className="text-lg font-bold text-triage-green mb-3 flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              RESOLVED CASES ({resolvedCases.length})
+            </h2>
             <div className="space-y-3">
               {resolvedCases.slice(-5).map(caseData => (
                 <CaseCard key={caseData.id} caseData={caseData} />

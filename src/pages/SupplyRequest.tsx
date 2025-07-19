@@ -79,7 +79,7 @@ export const SupplyRequest: React.FC = () => {
     setIsSubmitted(true);
     
     toast({
-      title: "✅ Supply request saved offline",
+      title: "Supply request saved offline",
       description: bluetoothEnabled ? "Broadcasting emergency signal..." : "Ready to share via QR code",
       duration: 4000,
     });
@@ -100,7 +100,7 @@ export const SupplyRequest: React.FC = () => {
         <div className="space-y-6 text-center">
           <div className="bg-blue-100 border border-blue-300 text-blue-800 p-6 rounded-xl">
             <Package className="w-12 h-12 mx-auto mb-3" />
-            <p className="font-bold text-lg">⚠️ {t('supply.saved')}</p>
+            <p className="font-bold text-lg">{t('supply.saved')}</p>
           </div>
 
           {bluetoothEnabled && (

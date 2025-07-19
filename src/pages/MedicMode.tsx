@@ -224,8 +224,9 @@ export const MedicMode: React.FC = () => {
             </div>
 
             {triagePriority === 'red' && (
-              <div className="bg-green-100 border border-green-300 text-green-800 p-4 rounded-xl">
-                ✅ {t('triage.redSaved')}
+              <div className="success-state flex items-center gap-2">
+                <CheckCircle className="w-5 h-5" />
+                {t('triage.redSaved')}
               </div>
             )}
 

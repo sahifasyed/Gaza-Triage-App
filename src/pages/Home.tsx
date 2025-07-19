@@ -33,7 +33,7 @@ export const Home: React.FC = () => {
         <div className="grid gap-4">
           <Button
             onClick={() => navigate('/public')}
-            className="emergency-button accent"
+            className="emergency-button"
           >
             <User className="w-6 h-6" />
             <span>{t('home.publicMode')}</span>

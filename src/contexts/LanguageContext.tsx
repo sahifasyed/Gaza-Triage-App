@@ -13,13 +13,13 @@ const translations = {
   en: {
     // Home Screen
     'app.title': 'Gaza Triage App',
-    'home.publicMode': '👤 Public Mode',
-    'home.medicMode': '🩺 Medic Mode',
-    'home.supplyRequest': '🆘 Request Urgent Supplies',
-    'home.firstAid': '🆘 Emergency First Aid Guide',
-    'home.savedCases': '📂 Saved Cases',
-    'home.consultQueue': '🌐 Consult Queue',
-    'home.bluetoothStatus': '📡 Bluetooth Status',
+    'home.publicMode': 'Public Mode',
+    'home.medicMode': 'Medic Mode',
+    'home.supplyRequest': 'Request Urgent Supplies',
+    'home.firstAid': 'Emergency First Aid Guide',
+    'home.savedCases': 'Saved Cases',
+    'home.consultQueue': 'Consult Queue',
+    'home.bluetoothStatus': 'Bluetooth Status',
     
     // Language
     'language.toggle': 'العربية',
@@ -30,14 +30,14 @@ const translations = {
     'public.title': 'Select Symptoms',
     'public.selectSymptoms': 'Tap symptoms you are experiencing:',
     'public.backHome': 'Back to Home',
-    'public.cameraOptional': '📷 Add Photo (Optional)',
-    'public.caseSaved': '✅ Case saved offline',
-    'public.gpsLocation': '📍 GPS Location',
+    'public.cameraOptional': 'Add Photo (Optional)',
+    'public.caseSaved': 'Case saved offline',
+    'public.gpsLocation': 'GPS Location',
     
     // Symptoms
     'symptom.unconscious': 'Unconscious',
-    'symptom.notBreathing': 'Not Breathing ✅',
-    'symptom.severeBleeding': 'Severe Bleeding ✅',
+    'symptom.notBreathing': 'Not Breathing',
+    'symptom.severeBleeding': 'Severe Bleeding',
     'symptom.chestPain': 'Severe Chest Pain',
     'symptom.headInjury': 'Head Injury',
     'symptom.difficultyBreathing': 'Difficulty Breathing',
@@ -49,12 +49,12 @@ const translations = {
     'symptom.bruise': 'Bruise',
     
     // Triage Levels
-    'triage.red': '🔴 CRITICAL EMERGENCY',
-    'triage.blue': '🔵 URGENT',
-    'triage.green': '🟢 NON-URGENT',
-    'triage.redSaved': '✅ Emergency case saved offline',
-    'triage.blueSaved': '✅ Urgent case saved offline',
-    'triage.greenSaved': '✅ Case saved offline',
+    'triage.red': 'CRITICAL EMERGENCY',
+    'triage.blue': 'URGENT',
+    'triage.green': 'NON-URGENT',
+    'triage.redSaved': 'Emergency case saved offline',
+    'triage.blueSaved': 'Urgent case saved offline',
+    'triage.greenSaved': 'Case saved offline',
     
     // Medic Mode
     'medic.title': 'Medic Assessment',
@@ -80,7 +80,7 @@ const translations = {
     'supply.anonymous': 'Anonymous request',
     'supply.optionalName': 'Optional: Your name',
     'supply.submit': 'Submit Supply Request',
-    'supply.saved': '⚠️ Supply Request Only — No injuries reported',
+    'supply.saved': 'Supply Request Only — No injuries reported',
     
     // First Aid
     'firstAid.title': 'Emergency First Aid Guide',
@@ -131,13 +131,13 @@ const translations = {
   ar: {
     // Home Screen
     'app.title': 'تطبيق فرز غزة',
-    'home.publicMode': '👤 الوضع العام',
-    'home.medicMode': '🩺 وضع الطبيب',
-    'home.supplyRequest': '🆘 طلب مستلزمات عاجلة',
-    'home.firstAid': '🆘 دليل الإسعافات الأولية',
-    'home.savedCases': '📂 الحالات المحفوظة',
-    'home.consultQueue': '🌐 قائمة الاستشارة',
-    'home.bluetoothStatus': '📡 حالة البلوتوث',
+    'home.publicMode': 'الوضع العام',
+    'home.medicMode': 'وضع الطبيب',
+    'home.supplyRequest': 'طلب مستلزمات عاجلة',
+    'home.firstAid': 'دليل الإسعافات الأولية',
+    'home.savedCases': 'الحالات المحفوظة',
+    'home.consultQueue': 'قائمة الاستشارة',
+    'home.bluetoothStatus': 'حالة البلوتوث',
     
     // Language
     'language.toggle': 'English',
@@ -148,14 +148,14 @@ const translations = {
     'public.title': 'اختر الأعراض',
     'public.selectSymptoms': 'اضغط على الأعراض التي تشعر بها:',
     'public.backHome': 'العودة للرئيسية',
-    'public.cameraOptional': '📷 إضافة صورة (اختياري)',
-    'public.caseSaved': '✅ تم حفظ الحالة بدون إنترنت',
-    'public.gpsLocation': '📍 موقع GPS',
+    'public.cameraOptional': 'إضافة صورة (اختياري)',
+    'public.caseSaved': 'تم حفظ الحالة بدون إنترنت',
+    'public.gpsLocation': 'موقع GPS',
     
     // Symptoms
     'symptom.unconscious': 'فاقد الوعي',
-    'symptom.notBreathing': 'لا يتنفس ✅',
-    'symptom.severeBleeding': 'نزيف شديد ✅',
+    'symptom.notBreathing': 'لا يتنفس',
+    'symptom.severeBleeding': 'نزيف شديد',
     'symptom.chestPain': 'ألم شديد في الصدر',
     'symptom.headInjury': 'إصابة في الرأس',
     'symptom.difficultyBreathing': 'صعوبة في التنفس',
@@ -167,12 +167,12 @@ const translations = {
     'symptom.bruise': 'كدمة',
     
     // Triage Levels
-    'triage.red': '🔴 حالة طوارئ حرجة',
-    'triage.blue': '🔵 عاجل',
-    'triage.green': '🟢 غير عاجل',
-    'triage.redSaved': '✅ تم حفظ حالة الطوارئ بدون إنترنت',
-    'triage.blueSaved': '✅ تم حفظ الحالة العاجلة بدون إنترنت',
-    'triage.greenSaved': '✅ تم حفظ الحالة بدون إنترنت',
+    'triage.red': 'حالة طوارئ حرجة',
+    'triage.blue': 'عاجل',
+    'triage.green': 'غير عاجل',
+    'triage.redSaved': 'تم حفظ حالة الطوارئ بدون إنترنت',
+    'triage.blueSaved': 'تم حفظ الحالة العاجلة بدون إنترنت',
+    'triage.greenSaved': 'تم حفظ الحالة بدون إنترنت',
     
     // Medic Mode
     'medic.title': 'تقييم طبي',
@@ -198,7 +198,7 @@ const translations = {
     'supply.anonymous': 'طلب مجهول',
     'supply.optionalName': 'اختياري: اسمك',
     'supply.submit': 'إرسال طلب المستلزمات',
-    'supply.saved': '⚠️ طلب مستلزمات فقط — لا توجد إصابات',
+    'supply.saved': 'طلب مستلزمات فقط — لا توجد إصابات',
     
     // First Aid
     'firstAid.title': 'دليل الإسعافات الأولية الطارئة',

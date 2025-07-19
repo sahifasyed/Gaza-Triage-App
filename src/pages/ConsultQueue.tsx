@@ -93,10 +93,14 @@ export const ConsultQueue: React.FC = () => {
       } text-white`}>
         <CardTitle className="flex items-center gap-2">
           <Activity className="w-5 h-5" />
-          <span>
-            {caseData.priority === 'red' ? '🔴 CRITICAL' : 
-             caseData.priority === 'blue' ? '🔵 URGENT' : 
-             '🟢 NON-URGENT'}
+          <span className={`px-2 py-1 rounded text-xs font-bold ${
+            caseData.priority === 'red' ? 'bg-triage-red text-white' : 
+            caseData.priority === 'blue' ? 'bg-triage-blue text-white' : 
+            'bg-triage-green text-white'
+          }`}>
+            {caseData.priority === 'red' ? 'CRITICAL' : 
+             caseData.priority === 'blue' ? 'URGENT' : 
+             'NON-URGENT'}
           </span>
         </CardTitle>
       </CardHeader>
