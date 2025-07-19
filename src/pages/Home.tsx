@@ -33,7 +33,7 @@ export const Home: React.FC = () => {
         <div className="grid gap-4">
           <Button
             onClick={() => navigate('/public')}
-            className="emergency-button"
+            className="emergency-button accent"
           >
             <User className="w-6 h-6" />
             <span>{t('home.publicMode')}</span>
@@ -49,7 +49,7 @@ export const Home: React.FC = () => {
 
           <Button
             onClick={() => navigate('/supply-request')}
-            className="emergency-button bg-accent text-accent-foreground hover:bg-accent/90"
+            className="emergency-button destructive"
           >
             <Package className="w-6 h-6" />
             <span>{t('home.supplyRequest')}</span>
@@ -104,7 +104,7 @@ export const Home: React.FC = () => {
         </div>
 
         {/* App Info */}
-        <div className="text-center text-sm text-muted-foreground pt-4 border-t tatreez-border">
+        <div className="text-center text-sm text-muted-foreground pt-4 border-t border-border">
           <p>{t('app.title')}</p>
           <p className="text-xs mt-1">Offline Emergency Triage System</p>
         </div>

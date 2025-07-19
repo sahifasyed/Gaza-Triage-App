@@ -1,54 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Gaza Triage App Design System - Palestinian-inspired colors with medical focus */
+/* Gaza Triage App Design System - Navy Blue Medical Theme */
 
 @layer base {
   :root {
-    /* Palestinian-inspired color palette */
-    --olive: 58 30% 28%;           /* #5A5634 - Primary olive */
-    --deep-red: 0 48% 29%;         /* #702525 - Emergency red */
-    --blush: 24 22% 74%;           /* #C3B4A5 - Soft neutral */
-    --beige: 36 56% 97%;           /* #FAF3ED - Background */
-    --camel: 29 28% 50%;           /* #A67758 - Secondary brown */
-    --violine: 331 20% 24%;        /* #4B3136 - Dark accent */
+    /* Navy Blue Medical color palette */
+    --navy-primary: 210 50% 19%;      /* #1B2A41 - Primary navy */
+    --navy-accent: 210 30% 35%;       /* #3A506B - Accent blue */
+    --emergency-red: 355 70% 55%;     /* #D64545 - Emergency red */
+    --medical-bg: 210 20% 96%;        /* #F4F6F8 - Background */
+    --text-dark: 0 0% 18%;            /* #2E2E2E - Dark gray text */
+    --border-light: 210 15% 80%;      /* #C9CED6 - Borders/inactive */
+    --success-green: 122 39% 49%;     /* #4CAF50 - Success states */
     
     /* Medical triage colors */
-    --triage-red: 0 85% 60%;       /* Critical emergency */
-    --triage-blue: 210 85% 60%;    /* Urgent */
-    --triage-green: 142 71% 45%;   /* Non-urgent */
+    --triage-red: 355 70% 55%;        /* Critical emergency */
+    --triage-blue: 210 85% 60%;       /* Urgent */
+    --triage-green: 122 39% 49%;      /* Non-urgent */
     
     /* App semantic colors */
-    --background: var(--beige);
-    --foreground: var(--violine);
+    --background: var(--medical-bg);
+    --foreground: var(--text-dark);
     
-    --card: var(--beige);
-    --card-foreground: var(--violine);
+    --card: 0 0% 100%;
+    --card-foreground: var(--text-dark);
     
-    --popover: var(--beige);
-    --popover-foreground: var(--violine);
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--text-dark);
     
-    --primary: var(--olive);
-    --primary-foreground: var(--beige);
+    --primary: var(--navy-primary);
+    --primary-foreground: 0 0% 100%;
     
-    --secondary: var(--blush);
-    --secondary-foreground: var(--violine);
+    --secondary: var(--navy-accent);
+    --secondary-foreground: 0 0% 100%;
     
-    --muted: var(--blush);
-    --muted-foreground: var(--camel);
+    --muted: var(--border-light);
+    --muted-foreground: var(--text-dark);
     
-    --accent: var(--camel);
-    --accent-foreground: var(--beige);
+    --accent: var(--navy-accent);
+    --accent-foreground: 0 0% 100%;
     
-    --destructive: var(--triage-red);
-    --destructive-foreground: var(--beige);
+    --destructive: var(--emergency-red);
+    --destructive-foreground: 0 0% 100%;
     
-    --border: var(--blush);
-    --input: var(--blush);
-    --ring: var(--olive);
+    --border: var(--border-light);
+    --input: var(--border-light);
+    --ring: var(--navy-primary);
     
     --radius: 0.75rem;
 
@@ -119,11 +120,11 @@
   
   /* RTL Support */
   [dir="rtl"] {
-    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+    font-family: 'Cairo', 'Noto Sans Arabic', sans-serif;
   }
   
   [dir="ltr"] {
-    font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+    font-family: 'Inter', 'Cairo', sans-serif;
   }
 }
 
@@ -144,36 +145,46 @@
     background-color: hsl(var(--triage-green));
   }
   
-  /* Emergency button styles */
+  /* Medical button styles */
   .emergency-button {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 
-           text-lg font-medium py-6 px-8 rounded-xl min-h-[80px] 
+    @apply bg-primary text-primary-foreground hover:bg-primary/95 
+           text-lg font-medium py-6 px-8 rounded-lg min-h-[80px] 
            flex items-center justify-center gap-3 transition-all
-           shadow-lg hover:shadow-xl active:scale-95;
+           shadow-md hover:shadow-lg active:scale-[0.98];
+  }
+  
+  .emergency-button.accent {
+    @apply bg-accent text-accent-foreground hover:bg-accent/95;
+  }
+  
+  .emergency-button.destructive {
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive/95;
   }
   
   .symptom-button {
-    @apply bg-card border-2 border-border text-card-foreground 
-           hover:bg-accent hover:text-accent-foreground
+    @apply bg-card border border-border text-card-foreground 
+           hover:bg-muted hover:border-muted-foreground/20
            py-4 px-6 rounded-lg text-base font-medium
            transition-all duration-200 min-h-[60px]
-           flex items-center justify-center text-center;
+           flex items-center justify-center text-center
+           shadow-sm hover:shadow-md;
   }
   
   .symptom-button.selected {
-    @apply bg-primary text-primary-foreground border-primary;
+    @apply bg-primary text-primary-foreground border-primary shadow-md;
   }
   
-  /* Tatreez-inspired border pattern */
-  .tatreez-border {
-    background-image: 
-      repeating-linear-gradient(
-        45deg,
-        hsl(var(--olive)) 0px,
-        hsl(var(--olive)) 2px,
-        transparent 2px,
-        transparent 8px
-      );
-    border: 2px solid hsl(var(--olive));
+  /* Medical card styles */
+  .medical-card {
+    @apply bg-card border border-border rounded-lg p-4 shadow-sm
+           hover:shadow-md transition-shadow duration-200;
+  }
+  
+  /* Success state utility */
+  .success-state {
+    @apply bg-green-50 border border-green-200 text-green-800 rounded-lg p-3;
+    background-color: hsl(var(--success-green) / 0.1);
+    border-color: hsl(var(--success-green) / 0.3);
+    color: hsl(var(--success-green));
   }
 }

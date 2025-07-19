@@ -145,7 +145,7 @@ export const PublicMode: React.FC = () => {
 
             {/* Auto-save status for red/blue cases */}
             {(triagePriority === 'red' || triagePriority === 'blue') && caseSaved && (
-              <div className="bg-green-100 border border-green-300 text-green-800 p-4 rounded-xl flex items-center gap-2">
+              <div className="success-state flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />
                 <span>{t('public.caseSaved')}</span>
               </div>

@@ -52,13 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Palestinian-inspired color palette
-				olive: 'hsl(var(--olive))',
-				'deep-red': 'hsl(var(--deep-red))',
-				blush: 'hsl(var(--blush))',
-				beige: 'hsl(var(--beige))',
-				camel: 'hsl(var(--camel))',
-				violine: 'hsl(var(--violine))',
+				// Navy Blue Medical color palette
+				'navy-primary': 'hsl(var(--navy-primary))',
+				'navy-accent': 'hsl(var(--navy-accent))',
+				'emergency-red': 'hsl(var(--emergency-red))',
+				'medical-bg': 'hsl(var(--medical-bg))',
+				'text-dark': 'hsl(var(--text-dark))',
+				'border-light': 'hsl(var(--border-light))',
+				'success-green': 'hsl(var(--success-green))',
 				// Medical triage colors
 				'triage-red': 'hsl(var(--triage-red))',
 				'triage-blue': 'hsl(var(--triage-blue))',
