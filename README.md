@@ -5,8 +5,6 @@
 [🔗 Live Preview](https://preview--gaza-aid-beacon-app.lovable.app/)  
 [🛠 Lovable Project Dashboard](https://lovable.dev/projects/ac6a871d-a370-427a-8ecb-8518d9aa237b)
 
-![Gaza Triage App](https://your-image-link-here.com/screenshot.png)
-
 An **offline-first**, **bilingual**, mobile-friendly triage application built for medical volunteers and first responders in Gaza. The app enables the capture and management of urgent cases with or without internet access, optimized for low-end Android/iOS devices, and designed with both Arabic (RTL) and English (LTR) language support.
 
 ---
