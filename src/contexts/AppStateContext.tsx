@@ -17,6 +17,8 @@ export interface TriageCase {
   resolved?: boolean;
   bluetoothBroadcasting?: boolean;
   broadcastStartTime?: number;
+  medicVerified?: boolean;
+  medicPmcId?: string;
 }
 
 interface AppStateContextType {

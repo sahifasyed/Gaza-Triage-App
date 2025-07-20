@@ -39,6 +39,20 @@ export const MedicMode: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [triagePriority, setTriagePriority] = useState<'red' | 'blue' | 'green'>('green');
   const [savedCaseId, setSavedCaseId] = useState<string>('');
+  const [verificationStatus, setVerificationStatus] = useState<{isVerified: boolean, pmcId: string} | null>(null);
+
+  // Check verification status on mount
+  useEffect(() => {
+    const stored = localStorage.getItem('medicVerification');
+    if (stored) {
+      try {
+        const verification = JSON.parse(stored);
+        setVerificationStatus(verification);
+      } catch (error) {
+        console.error('Error loading verification:', error);
+      }
+    }
+  }, []);
 
   // Get GPS location on mount
   useEffect(() => {
@@ -84,7 +98,9 @@ export const MedicMode: React.FC = () => {
       patientName: formData.patientName,
       age: formData.age,
       location: formData.location || gpsLocation,
-      gpsCoordinates: coords || undefined
+      gpsCoordinates: coords || undefined,
+      medicVerified: verificationStatus?.isVerified || false,
+      medicPmcId: verificationStatus?.pmcId
     });
 
     setSavedCaseId(newCase.id);
@@ -126,6 +142,24 @@ export const MedicMode: React.FC = () => {
       onBack={() => navigate('/')}
     >
       <div className="space-y-6">
+        {/* Verification Status Banner */}
+        {verificationStatus && (
+          <div className={`p-3 rounded-lg border-2 ${
+            verificationStatus.isVerified 
+              ? 'bg-green-50 border-green-200 text-green-800' 
+              : 'bg-yellow-50 border-yellow-200 text-yellow-800'
+          }`}>
+            <div className="flex items-center gap-2">
+              <CheckCircle className={`w-4 h-4 ${verificationStatus.isVerified ? 'text-green-600' : 'text-yellow-600'}`} />
+              <span className="text-sm font-medium">
+                {verificationStatus.isVerified 
+                  ? `Verified Medic: ${verificationStatus.pmcId}` 
+                  : 'Unverified - Assessment will be marked accordingly'}
+              </span>
+            </div>
+          </div>
+        )}
+
         {!isSubmitted ? (
           <>
             {/* Patient Information Form */}

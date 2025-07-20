@@ -9,6 +9,7 @@ import { AppStateProvider } from "@/contexts/AppStateContext";
 // Import all pages
 import { Home } from "./pages/Home";
 import { PublicMode } from "./pages/PublicMode";
+import { MedicVerification } from "./pages/MedicVerification";
 import { MedicMode } from "./pages/MedicMode";
 import { SupplyRequest } from "./pages/SupplyRequest";
 import { FirstAid } from "./pages/FirstAid";
@@ -30,6 +31,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/public" element={<PublicMode />} />
+              <Route path="/medic-verification" element={<MedicVerification />} />
               <Route path="/medic" element={<MedicMode />} />
               <Route path="/supply-request" element={<SupplyRequest />} />
               <Route path="/first-aid" element={<FirstAid />} />

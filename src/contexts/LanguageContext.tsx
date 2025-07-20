@@ -21,6 +21,16 @@ const translations = {
     'home.consultQueue': 'Consult Queue',
     'home.bluetoothStatus': 'Bluetooth Status',
     
+    // Medic Verification
+    'medicVerification.title': 'Medic Mode Access',
+    'medicVerification.description': 'If you are a verified medic, please enter your PMC Medic ID below. This helps ensure accurate aid data.',
+    'medicVerification.pmcIdLabel': 'Enter PMC Medic ID (optional)',
+    'medicVerification.pmcIdPlaceholder': 'PMC-12345',
+    'medicVerification.continueButton': 'Continue to Medic Mode',
+    'medicVerification.verifyLaterButton': 'Verify Later (not recommended)',
+    'medicVerification.willBeVerified': 'You will be marked as verified medic',
+    'medicVerification.delayNote': 'Verification can be completed later to avoid delaying emergency aid.',
+    
     // Language
     'language.toggle': 'العربية',
     'language.english': 'English',
@@ -138,6 +148,16 @@ const translations = {
     'home.savedCases': 'الحالات المحفوظة',
     'home.consultQueue': 'قائمة الاستشارة',
     'home.bluetoothStatus': 'حالة البلوتوث',
+    
+    // Medic Verification
+    'medicVerification.title': 'الوصول لوضع الطبيب',
+    'medicVerification.description': 'إذا كنت طبيباً معتمداً، يرجى إدخال رقم هوية الطبيب PMC أدناه. هذا يساعد في ضمان دقة بيانات المساعدة.',
+    'medicVerification.pmcIdLabel': 'أدخل رقم هوية الطبيب PMC (اختياري)',
+    'medicVerification.pmcIdPlaceholder': 'PMC-12345',
+    'medicVerification.continueButton': 'المتابعة إلى وضع الطبيب',
+    'medicVerification.verifyLaterButton': 'التحقق لاحقاً (غير مستحسن)',
+    'medicVerification.willBeVerified': 'سيتم تسجيلك كطبيب معتمد',
+    'medicVerification.delayNote': 'يمكن إكمال التحقق لاحقاً لتجنب تأخير المساعدة الطارئة.',
     
     // Language
     'language.toggle': 'English',

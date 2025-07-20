@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
           </Button>
 
           <Button
-            onClick={() => navigate('/medic')}
+            onClick={() => navigate('/medic-verification')}
             className="emergency-button"
           >
             <Stethoscope className="w-6 h-6" />

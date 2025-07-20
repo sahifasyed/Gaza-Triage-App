@@ -109,6 +109,11 @@ export const SavedCases: React.FC = () => {
           <div className="flex items-center gap-2">
             <User className="w-4 h-4" />
             <span><strong>Name:</strong> {caseData.patientName}</span>
+            {caseData.type === 'medic' && caseData.medicVerified && (
+              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
+                ✓ Verified Medic
+              </span>
+            )}
           </div>
         )}
         
