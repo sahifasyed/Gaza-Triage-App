@@ -1,73 +1,138 @@
-# Welcome to your Lovable project
+# Gaza Triage App
 
-## Project info
+🌿 **Offline Emergency Medical Aid for Gaza — Powered by the Ummah**
 
-**URL**: https://lovable.dev/projects/ac6a871d-a370-427a-8ecb-8518d9aa237b
+[🔗 Live Preview](https://preview--gaza-aid-beacon-app.lovable.app/)  
+[🛠 Lovable Project Dashboard](https://lovable.dev/projects/ac6a871d-a370-427a-8ecb-8518d9aa237b)
 
-## How can I edit this code?
+![Gaza Triage App](https://your-image-link-here.com/screenshot.png)
 
-There are several ways of editing your application.
+An **offline-first**, **bilingual**, mobile-friendly triage application built for medical volunteers and first responders in Gaza. The app enables the capture and management of urgent cases with or without internet access, optimized for low-end Android/iOS devices, and designed with both Arabic (RTL) and English (LTR) language support.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ac6a871d-a370-427a-8ecb-8518d9aa237b) and start prompting.
+## 🧩 Table of Contents
 
-Changes made via Lovable will be committed automatically to this repo.
+- [🚀 Features](#-features)  
+- [🛠 Technology Stack](#-technology-stack)  
+- [📦 Getting Started](#-getting-started)  
+- [🌍 Deployment](#-deployment)  
+- [🤝 Contributing](#-contributing)  
+- [📄 License](#-license)  
+- [🙏 Acknowledgements](#-acknowledgements)
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **🔌 Offline-First Functionality**  
+  Supports full use in disconnected environments to ensure care even during internet outages.
 
-Follow these steps:
+- **🌐 Bilingual Interface**  
+  Toggle between Arabic and English instantly — supports RTL/LTR layouts.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **📱 Mobile-Optimized**  
+  Runs smoothly on low-end Android and iOS devices, ensuring inclusive accessibility.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **🧠 Simple UI for Rapid Triage**  
+  Designed for speed and clarity under pressure — no technical training needed.
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **📂 Saved Emergency/Urgent Cases Screen**  
+  Stores RED and BLUE triage cases locally for offline reference.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- **🌐 Consult Queue Upload Screen**  
+  Queues consult cases for upload when internet becomes available.
+
+---
+
+## 🛠 Technology Stack
+
+| Tool            | Purpose                  |
+|-----------------|--------------------------|
+| **React**       | Frontend framework        |
+| **Vite**        | Lightning-fast dev server |
+| **TypeScript**  | Type-safe JavaScript      |
+| **shadcn/ui**   | Headless UI components    |
+| **Tailwind CSS**| Utility-first styling     |
+
+---
+
+## 📦 Getting Started
+
+There are 3 ways to work with this project:
+
+### 1. 🧪 Use Lovable.dev (Recommended)
+- Visit the [Lovable Project](https://lovable.dev/projects/ac6a871d-a370-427a-8ecb-8518d9aa237b)
+- Make changes visually or with prompts
+- All updates are auto-committed
+
+### 2. 💻 Local Development
+
+# Clone the repository
+git clone https://github.com/your-username/gaza-triage-app.git
+
+# Enter the directory
+cd gaza-triage-app
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+⚠️ **Requires Node.js and npm.** Install via `nvm`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+### 3. 🧑‍💻 GitHub Codespaces
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Go to your GitHub repository  
+- Click **Code → Codespaces → Create codespace on main**  
+- Start coding in the browser (no local setup!)
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+### 🌍 Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+You can publish directly using **Lovable**:
 
-## How can I deploy this project?
+- Go to the project page  
+- Click **Share → Publish**  
+- Done! Preview goes live instantly
 
-Simply open [Lovable](https://lovable.dev/projects/ac6a871d-a370-427a-8ecb-8518d9aa237b) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+### 🔗 Custom Domains
 
-Yes, you can!
+- Navigate to: **Project > Settings > Domains** on Lovable  
+- Click **Connect Domain**  
+- Follow DNS instructions provided
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### 🤝 Contributing
+
+We welcome community contributions!
+
+1. Fork the repo  
+2. Create a new branch  
+   ```bash
+   git checkout -b feature/your-feature
+    ```
+
+Commit your changes
+
+ ```bash
+git commit -m "Add new feature"
+ ```
+Push and open a Pull Request
+
+📄 License
+MIT © 2025
+[Sahifa Syed]
+
+🙏 Acknowledgements
+- Lovable.dev — for their low-code builder and hosting
+- Deen Developers For Hosting this Hackathon
+- Gaza-based healthcare volunteers — for real-world insights
+- Open-source community — for shadcn/ui, Tailwind, and Vite
