@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import oliveLogo from '@/assets/olive-logo.png';
+import { Cross } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -27,7 +27,7 @@ export const Layout: React.FC<LayoutProps> = ({
   return (
     <div dir={dir} className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-primary text-primary-foreground p-4 shadow-lg">
+      <header className="bg-primary text-primary-foreground p-4">
         <div className="flex items-center justify-between max-w-md mx-auto">
           {showBack && (
             <Button
@@ -41,7 +41,7 @@ export const Layout: React.FC<LayoutProps> = ({
           )}
           
           <div className="flex items-center gap-2 flex-1 justify-center">
-            <img src={oliveLogo} alt="Gaza Triage" className="w-8 h-8" />
+            <Cross className="w-6 h-6 text-primary-foreground" />
             <h1 className="text-lg font-semibold">
               {title || t('app.title')}
             </h1>
