@@ -116,15 +116,16 @@ We welcome community contributions!
 
 1. Fork the repo  
 2. Create a new branch  
+
    ```bash
    git checkout -b feature/your-feature
     ```
 
-Commit your changes
+3. Commit your changes
 
- ```bash
-git commit -m "Add new feature"
- ```
+```bash
+  git commit -m "Add new feature"
+   ```
 Push and open a Pull Request
 
 📄 License
