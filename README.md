@@ -2,8 +2,11 @@
 
 🌿 **Offline Emergency Medical Aid for Gaza — Powered by the Ummah**
 
-[🔗 Live Preview](https://preview--gaza-aid-beacon-app.lovable.app/)  
-[🛠 Lovable Project Dashboard](https://lovable.dev/projects/ac6a871d-a370-427a-8ecb-8518d9aa237b)
+- [🔗 Live Preview](https://preview--gaza-aid-beacon-app.lovable.app/)  
+- [🛠 Lovable Project Dashboard](https://lovable.dev/projects/ac6a871d-a370-427a-8ecb-8518d9aa237b)
+- [🔗 Live Preview](https://sparkling-daffodil-9c3694.netlify.app/)
+- [🎥 App Demo](https://drive.google.com/file/d/1OtTy-SmAey8sOfEWfmkZrwCw4juhFZSq/view?usp=sharing)
+
 
 An **offline-first**, **bilingual**, mobile-friendly triage application built for medical volunteers and first responders in Gaza. The app enables the capture and management of urgent cases with or without internet access, optimized for low-end Android/iOS devices, and designed with both Arabic (RTL) and English (LTR) language support.
 
